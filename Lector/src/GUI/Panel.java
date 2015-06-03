@@ -49,6 +49,8 @@ public class Panel extends JPanel implements ActionListener {
         btnGuardar = new JButton("Guardar");
         btnBuscar = new JButton();
         txtBuscar = new JTextField();
+        /*Instanciamos el JTextane con el DefaultStyledDocument para cambiar el
+        estilo de la letra a traves de este*/
         txpFile = new JTextPane(doc);
         scroll = new JScrollPane(txpFile);
         lblFile = new JLabel();
@@ -64,7 +66,8 @@ public class Panel extends JPanel implements ActionListener {
 
         lblFile.setFont(new Font("Arial", Font.BOLD, 20));
 
-        ImageIcon icon = new ImageIcon(getClass().getResource("/images/lupa.png"));
+        ImageIcon icon = new ImageIcon(getClass()
+                .getResource("/images/lupa.png"));
         btnBuscar.setIcon(icon);
 
         btnAbrir.addActionListener(this);
@@ -208,7 +211,8 @@ public class Panel extends JPanel implements ActionListener {
                     texto = l.leerArchivo(abre);
                 }
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "No se ha encontrado el archivo",
+                JOptionPane.showMessageDialog(null,
+                        "No se ha encontrado el archivo",
                         "ADVERTENCIA", JOptionPane.WARNING_MESSAGE);
             }
         }

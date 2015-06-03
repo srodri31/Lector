@@ -38,6 +38,8 @@ public class PanelMostrar extends JPanel {
         lblMen2.setBounds(0, 25, 250, 30);
         lblPorcentaje.setBounds(0, 55, 250, 30);
         
+        /*De acuerdo al porcentaje de plagio el texto se pintara de un color
+        determinado*/
         if (porcentaje <= 20) {
             lblPorcentaje.setForeground(Color.GREEN);
         } else if (porcentaje <= 40) {
